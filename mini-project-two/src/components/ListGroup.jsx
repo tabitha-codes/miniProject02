@@ -1,28 +1,12 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-function ListGroup() {
-  const items = [
-    "Home",
-    "Explore",
-    "Neighbor Notes",
-    "Leasing Jargon",
-    "The Neighborhood Dashboard",
-    "The Pre-Lease Checklist",
-    "Saved",
-    "Profile",
-    "Settings",
-    "Sign in",
-    "Sign up",
-  ];
-
-//StateHook
-const [selectedIndex, setSelectedIndex] = useState(-1);
-
+function ListGroup({ items, heading }) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      {/*fragment to wrap all of these children */}
-      <h1>Slide in Menu</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {items.map((item, index) => (
           <li
@@ -32,7 +16,7 @@ const [selectedIndex, setSelectedIndex] = useState(-1);
                 : "list-group-item"
             }
             key={item}
-            onClick={() => {setSelectedIndex(index)}}
+            onClick={() => setSelectedIndex(index)}
           >
             {item}
           </li>
@@ -41,5 +25,10 @@ const [selectedIndex, setSelectedIndex] = useState(-1);
     </>
   );
 }
+
+ListGroup.propTypes = {
+  items: PropTypes.array.isRequired,
+  heading: PropTypes.string.isRequired,
+};
 
 export default ListGroup;
