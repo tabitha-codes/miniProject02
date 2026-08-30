@@ -1,0 +1,38 @@
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: white;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.slide-menu.open {
+  transform: translateX(0);
+}
+
+/* Pins the footer to the viewport bottom regardless of page content
+   height. Renamed from .footer to .footer-fixed to avoid colliding
+   with the .footer class already defined in Footer.css — same class
+   name in two files meant behavior depended on stylesheet import
+   order, which is fragile and easy to break silently later. */
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Reserves space at the bottom of the page so fixed-position footer
+   content doesn't overlap page content above it. NOTE: this assumes
+   the footer stays at or under ~70px tall — unverified against how
+   .footer-links wraps on narrow screens. Worth checking at your
+   smallest supported breakpoint. */
+.page-wrapper {
+  padding-bottom: 70px;
+}

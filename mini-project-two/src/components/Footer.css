@@ -1,0 +1,37 @@
+/* Copyright text and link list pinned to opposite ends via
+   space-between; align-items centers them on the cross axis so text
+   and links line up regardless of any height difference. */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #eee;
+  margin-top: 3rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+}
+
+/* Visible keyboard-focus indicator — links are natively focusable, so
+   no tabIndex needed in JSX (unlike the list-group items), but the
+   default browser outline was never overridden here, so without this
+   rule focus is either invisible or inconsistent across browsers. */
+.footer-links a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
