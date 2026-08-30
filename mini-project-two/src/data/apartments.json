@@ -1,0 +1,98 @@
+[
+  {
+    "id": "apt_001",
+    "name": "Camden Belmont",
+    "neighborhood": "Uptown",
+    "city": "Dallas",
+    "state": "TX",
+    "price": 1650,
+    "beds": 1,
+    "baths": 1,
+    "sqft": 720,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_002",
+    "name": "Parkview Commons",
+    "neighborhood": "Logan Square",
+    "city": "Chicago",
+    "state": "IL",
+    "price": 1450,
+    "beds": 2,
+    "baths": 1,
+    "sqft": 850,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_003",
+    "name": "Riverline Lofts",
+    "neighborhood": "West Loop",
+    "city": "Chicago",
+    "state": "IL",
+    "price": 2100,
+    "beds": 1,
+    "baths": 1,
+    "sqft": 690,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_004",
+    "name": "Oakwood Terrace",
+    "neighborhood": "Andersonville",
+    "city": "Chicago",
+    "state": "IL",
+    "price": 1550,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 900,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_005",
+    "name": "Magnolia Row",
+    "neighborhood": "Bishop Arts",
+    "city": "Dallas",
+    "state": "TX",
+    "price": 1400,
+    "beds": 1,
+    "baths": 1,
+    "sqft": 680,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_006",
+    "name": "The Crestline",
+    "neighborhood": "Lakeview",
+    "city": "Chicago",
+    "state": "IL",
+    "price": 1875,
+    "beds": 2,
+    "baths": 1,
+    "sqft": 810,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_007",
+    "name": "Sundance Flats",
+    "neighborhood": "Deep Ellum",
+    "city": "Dallas",
+    "state": "TX",
+    "price": 1300,
+    "beds": 1,
+    "baths": 1,
+    "sqft": 640,
+    "image": "placeholder"
+  },
+  {
+    "id": "apt_008",
+    "name": "Birchwood Commons",
+    "neighborhood": "Pilsen",
+    "city": "Chicago",
+    "state": "IL",
+    "price": 1500,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 880,
+    "image": "placeholder"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "rc_001",
+    "author": "Taylor R.",
+    "postedAgo": "3 mins ago",
+    "propertyName": "Camden Belmont",
+    "propertyLocation": "Uptown, Dallas",
+    "rating": 4,
+    "wouldSign": "Yes",
+    "pros": ["Resort-style pool", "Friendly staff"],
+    "cons": ["Small closets", "Street noise"],
+    "likes": 23,
+    "comments": 5
+  },
+  {
+    "id": "rc_002",
+    "author": "DeShawn M.",
+    "postedAgo": "1 day ago",
+    "propertyName": "Parkview Commons",
+    "propertyLocation": "Logan Square, Chicago",
+    "rating": 4,
+    "wouldSign": "Yes",
+    "pros": ["Responsive landlord", "Clean common areas"],
+    "cons": ["Street noise", "Small closets"],
+    "likes": 89,
+    "comments": 31
+  },
+  {
+    "id": "rc_003",
+    "author": "Priya K.",
+    "postedAgo": "2 days ago",
+    "propertyName": "Riverline Lofts",
+    "propertyLocation": "West Loop, Chicago",
+    "rating": 2,
+    "wouldSign": "No",
+    "pros": ["Great views", "In-unit laundry"],
+    "cons": ["Slow maintenance", "Thin walls"],
+    "likes": 14,
+    "comments": 8
+  },
+  {
+    "id": "rc_004",
+    "author": "Marcus B.",
+    "postedAgo": "4 days ago",
+    "propertyName": "Oakwood Terrace",
+    "propertyLocation": "Andersonville, Chicago",
+    "rating": 3,
+    "wouldSign": "Maybe",
+    "pros": ["Quiet block", "Pet friendly"],
+    "cons": ["Outdated kitchen", "Limited parking"],
+    "likes": 31,
+    "comments": 6
+  }
+]
