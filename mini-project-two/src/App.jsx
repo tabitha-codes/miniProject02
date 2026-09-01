@@ -4,6 +4,7 @@ import ListGroup from "./components/ListGroup";
 import Navbar from "./components/NavBar";
 import MissionSection from "./components/MissionSection";
 import Hero from "./components/Hero";
+import ExploreCities from "./components/ExploreCities";
 import Footer from "./components/Footer";
 import NeighborNotes from "./components/NeighborNotes/NeighborNotes";
 import "./App.css";
@@ -82,6 +83,7 @@ function App() {
             <>
               <MissionSection />
               <Hero />
+              <ExploreCities />
             </>
           }
         />

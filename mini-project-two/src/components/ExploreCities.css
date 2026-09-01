@@ -1,0 +1,37 @@
+.explore-cities{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.explore-cities-heading{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  color: #111;
+}
+
+.city-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.city-card{
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+}
+
+.city-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.city-count{
+  font-size: 14px;
+  color: #777;
+}
