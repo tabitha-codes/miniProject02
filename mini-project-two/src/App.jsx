@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import ExploreCities from "./components/ExploreCities";
 import Footer from "./components/Footer";
 import NeighborNotes from "./components/NeighborNotes/NeighborNotes";
+import LoginModal from "./components/LoginModal";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,16 @@ function App() {
   // Navbar (controls the hamburger icon) and used locally to toggle
   // the slide-menu class.
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Controls whether the login modal is visible. Separate from
+  // isMenuOpen — opening the modal should also close the slide menu,
+  // but the two aren't the same piece of state.
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  // null = logged out. Once someone logs in successfully, holds the
+  // matched user object from users.json (id, name, email) — passed
+  // down to Navbar so it can show who's signed in.
+  const [currentUser, setCurrentUser] = useState(null);
 
   // Lets us change the URL in code (e.g. on a menu click) instead of
   // relying on <a href> links — required for handleSelectItem below.
@@ -41,9 +52,28 @@ function App() {
   // path, then closes the menu so it doesn't stay open once the user
   // has navigated. (Previously only logged the item; nothing actually
   // moved the user to a new page.)
+  //
+  // "Sign in" is special-cased to open the login modal instead of
+  // navigating to /signin — everything else still routes normally.
   const handleSelectItem = (item) => {
-    navigate(item.path);
+    if (item.label === "Sign in") {
+      setIsLoginOpen(true);
+    } else {
+      navigate(item.path);
+    }
     setIsMenuOpen(false);
+  };
+
+  // Called by LoginModal once it finds a matching user in users.json.
+  // Stores who's logged in and closes the modal.
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+    setIsLoginOpen(false);
+  };
+
+  // Passed down to Navbar so a logged-in user can sign back out.
+  const handleLogout = () => {
+    setCurrentUser(null);
   };
 
   // Escape-key dismissal — covers keyboard users who opened the menu
@@ -59,7 +89,12 @@ function App() {
 
   return (
     <div className="page-wrapper">
-      <Navbar isOpen={isMenuOpen} onToggle={() => setIsMenuOpen(!isMenuOpen)} />
+      <Navbar
+        isOpen={isMenuOpen}
+        onToggle={() => setIsMenuOpen(!isMenuOpen)}
+        currentUser={currentUser}
+        onLogout={handleLogout}
+      />
 
       {/* Closes the menu when the mouse leaves it — a hover-based
           dismiss, separate from the hamburger's click-to-toggle and
@@ -89,6 +124,15 @@ function App() {
         />
         <Route path="/neighbor-notes" element={<NeighborNotes />} />
       </Routes>
+
+      {/* Rendered outside of Routes since it's a modal, not a page —
+          it needs to be able to pop up regardless of which route is
+          currently active. */}
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onLoginSuccess={handleLoginSuccess}
+      />
 
       <Footer />
     </div>
